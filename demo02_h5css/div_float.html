@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .div1{
+            height: 20px;
+            border: 1px solid blue;
+            background: pink;
+        }
+
+        .div2{
+            height: 20px;
+            border: 1px solid blue;
+            background: pink;
+            margin-top: 5px;
+            float: left; /*左浮动*/
+            line-height: 20px; /*让div中的文字内容垂直居中*/
+            text-align: center;
+        }
+        .div3{
+            width:70px;
+            height: 20px;
+            border: 1px solid blue;
+            background: pink;
+            float: left; /*左浮动*/
+        }
+        .div4{
+             width:100px;
+             height: 50px;
+             border: 1px solid blue;
+             background: #f04cff;
+         }
+
+        .div5{
+            width:100px;
+            height: 50px;
+            border: 1px solid blue;
+            background: #f04cff;
+            float:left;
+        }
+
+        .father{
+            width: 250px;
+            background:purple;
+        }
+        .child1{
+            width: 100px;
+            height: 100px;
+            background: orange;
+            float: left;
+        }
+        .child2{
+            background: green;
+            width: 200px;
+            height: 200px;
+            float:left;
+        }
+    </style>
+
+</head>
+
+<body>
+<h3>浮动:在div+css中浮动分为 左浮动，右浮动，清除浮动,想像浮动就是平行屏幕飘了起来</h3>
+
+<ol>
+    <li>右浮动:指一个块元素向右移动，让出自己空间， 向右移动直到碰到包含自己的父元素的最右边的边框.</li>
+    <li>左浮动:某个块元素尽量向左边移动，这样就让出它右面的空间，让别的块元素显示.</li>
+    <li>浮动的特别说明:
+        如果浮动元素的高度不同，那么当它们向下移动时可能被其它浮
+        动元素“卡住”：直到有足够空间.
+    </li>
+</ol>
+<hr>
+
+<h3>当一个div容器里没有内容且不指明width时，他的宽度默认100%，但是当为这个div设置float：left时，width值变为0.</h3>
+<div>
+    <div class="div1">
+    </div>
+    <div class="div2">
+        div
+    </div>
+</div>
+<h3 style="clear:both">本行style进行了浮动清除，否则就会跑到浮动的div右侧</h3>
+<hr >
+<h2>对于兄弟级别的div：</h2>
+<h3>1.每个div原本都是独占一行的，但是当前一个节点的div设置float:left;时，后div将出现在第一个div的下面。
+    原因：第一个div漂浮起来了(float),它原本的位置就空出来了，于是第二个div就占据了第一个的位置，所以他们的状态是一种重叠的状态。</h3>
+<div class="div3">
+    float:left;
+</div>
+<div class="div4">
+</div>
+<hr>
+
+<h3>2.当所有兄弟级别的div都设置float:left;时，每个div就失去了独占一排的状态，可以并排存在。</h3>
+<div class="div3">
+    float:left;
+</div>
+<div class="div5">
+    float:left;
+</div>
+<hr style="clear:both">
+
+<h2>对于父子级别的div：</h2> 
+<h3>1.如果不指定父元素的高度，则父元素的高度为0，因为子元素漂浮起来，并没有把父元素撑开</h3>
+<div class = "father">
+    <div class = "child1"></div>
+    <div class = "child2"></div>
+</div>
+<hr style="clear:both">
+
+<h3>2.如果指定了父元素的高度，则父元素保持原高度不变.同理，子元素浮动并不能撑开父元素。
+    浮动子元素在父容器内的排列规则：浮动元素优先排一列，若宽度溢出父容器则另起一行排列。若竖排列子元素合高度若大于父元素高度，则向下溢出。
+</h3>
+<style type="text/css">
+.father20{
+width: 150px;
+    height:50px;
+background:purple;
+}
+.child21{
+width: 100px;
+height: 30px;
+background: orange;
+float: left;
+}
+.child22{
+background: green;
+width: 200px;
+height: 100px;
+float:left;
+}
+</style>
+<div class="father20">
+    <div class="child21">float:left;</div>
+    <div class="child22">float:left;</div>
+</div>
+
+
+<hr style="clear:both">
+
+<h3>3.如果子元素没有浮动效果且父元素高度没有指定大小，则父元素会被撑开</h3>
+<style type="text/css">
+    .father30{
+        width: 350px;
+        background:purple;
+    }
+    .child31{
+        width: 100px;
+        height: 30px;
+        background: orange;
+    }
+    .child32{
+        background: green;
+        width: 200px;
+        height: 100px;
+    }
+</style>
+<div class="father30">
+    <div class="child31"></div>
+    <div class="child32"></div>
+</div>
+<hr>
+
+</body>
+</html>

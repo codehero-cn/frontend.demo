@@ -1,0 +1,48 @@
+/*盒子模型的概念 : margin, padding, border content */
+.div1{
+    width:50px;
+    height:52px;
+    border:1px solid blue;
+    /*	margin-top:5px;
+        margin-left:5px;*/
+    margin: 5px 0px 0px 5px;
+    /*padding-top:35px;*/
+}
+.div1 img{
+    width:40px;
+    height:40px;
+    margin-top:5px;
+    margin-left:5px;
+}
+
+.div2{
+    width:450px;
+    height:300px;
+    border:1px solid gray;
+    margin-left:200px;
+}
+
+.faceul{
+    width:300px;
+    height:250px;
+    border:1px solid red;
+    padding-left:5px;
+    margin-left:10px;
+}
+
+.faceul li{
+    list-style-type:none;
+    float:left;/*左浮动，这个知识点后面说*/
+    width:50px;
+    height:52px;
+    border:1px solid red;
+    margin-right:15px;
+    margin-top:15px;
+
+}
+.faceul li img{
+    margin-left:5px;
+    margin-top:5px;
+    width: 40px;
+    height:40px;
+}

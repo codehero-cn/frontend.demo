@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景</title>
+    <link href="../css/vendor/normalize.css" rel="stylesheet">
+    <link href="css/background.css"  rel="stylesheet"/>
+</head>
+<body>
+<h3>使用background-image的时候，给一个没有设置宽高的盒子设置背景图片，但是无法显示，只有子级里面有内容把父级盒子撑开之后，
+    背景图片才能够显示，而且只能显示撑开的部分。,就算设置   width:100%; height:100%;也没有用</h3>
+<h4>background的覆盖范围是content区域加上padding区域加上border区域(border-color:transparent设置透明后可以看到)。</h4>
+<div class="background1" >
+    <div>背景实验,一定要有div才能撑开看到背景图</div>
+    <div>背景实验,一定要有div才能撑开看到背景图</div>
+    <div>背景实验,一定要有div才能撑开看到背景图</div>
+</div>
+
+<hr>
+<h3>background-size:contain;可以把图片全显示出来</h3>
+<div class="background2">
+    <div>背景实验,一定要有div才能撑开看到背景图</div>
+    <div>背景实验,一定要有div才能撑开看到背景图</div>
+</div>
+
+<hr>
+<h3>使用vw vh</h3>
+<div class="background3">
+
+</div>
+
+</body>
+</html>

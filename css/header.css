@@ -1,0 +1,25 @@
+.header {
+    position: fixed;
+    top: 0px;left:0px;right:0px;margin:0 auto;/*这句很重要，头部导航固定时，使用position: fixed; 会导致导航的宽度大于容器的宽度，引起位置的偏移*/
+    float: top;
+    width: calc(98% - 2px);
+    height: 20px;
+    border: solid 1px #ff6e7f;
+    font-size: 12px;
+    
+}
+
+.header-left{
+    float:left;
+    width:17%;
+    border:solid 1px #84ff86;
+    font-weight:bold;
+    line-height:18px;//高度和容器一样则会上下居中
+}
+
+.header-right{
+    float:right;
+    top: 0px;left:0px;right:0px;margin:0 auto;
+    border:solid 1px #b1ff9d;
+    line-height:18px;//高度和容器一样则会上下居中  
+}

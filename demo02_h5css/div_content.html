@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>div中content的使用居中</title>
+</head>
+<style type="text/css">
+    .content {
+        width: 700px;
+        height: 200px;
+        border: 1px solid red;
+        position: relative;
+        line-height: 200px; /*让class=content父div中的文字垂直居中*/
+    }
+    span{
+        background: green;
+    }
+    .box{
+        background: yellow;
+        width: 200px;
+        height: 100px;
+        line-height: 100px;/*让黄色div中的文字内容垂直居中*/
+        text-align: center;/*让文字水平居中*/
+        position: absolute;
+        top:50%;
+        margin-top: -50px;
+        margin-left: 200px;
+    }
+    .pox{
+        background: #ffa88f;
+        width: 200px;
+        height: 70px;
+        display: inline-block; /*一定要将div设置为inline-block*/
+        vertical-align: middle;/*设置该元素在父元素中的位置*/
+        line-height: 70px;
+        border: 1px solid green;
+        text-align: center;
+        float:right;
+    }
+</style>
+
+<body>
+<h3>div中设置文字居中+内部div中文字垂直居中</h3>
+<div class="content">
+    <span>这是一个测试要居中</span>
+    <div class="box">我是div中的文字居中</div>
+    <div class="pox">我是div中的文字居中</div>
+</div>
+</body>
+</html>

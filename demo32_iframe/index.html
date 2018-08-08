@@ -1,0 +1,37 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <title>iframe应用示例（兼容主流的浏览器），已亲测</title>
+    <link href="style/style.css" type="text/css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script language="javascript" type="text/javascript">
+        myjq = jQuery.noConflict();
+        var iframeHeight = function () {
+            var _height = myjq(window).height() - 50;
+            myjq('#content').height(_height);
+        }
+        window.onresize = iframeHeight;
+        myjq(function () {
+            iframeHeight();
+        });
+    </script>
+</head>
+<body>
+<div id="header" class="kj_top" style=" border-style: none none solid none;overflow:hidden; width:100%; 
+    background-color: #000000; border-bottom-color: #DBDBDB; height:37px;">
+    <div style=" width:980px; margin:0 auto;">
+        <a href="http://www.youtiy.com" title=""><img src="images/logo.png"
+                                                      style=" width:35px; height:35px; vertical-align:middle; float:left;"
+                                                      alt=""/></a>
+        <p class="left" style=" margin-top:3px;">
+            <a href="http://www.youtiy.com/" target="_blank" style=" color:White; font-weight:bold; font-size:15px;">网页模板</a>
+        </p>
+        <div class="clear"></div>
+    </div>
+</div>
+<div id="container" style="overflow:hidden;">
+    <iframe border="0" id="content" src="http://www.baidu.com/" frameborder="0" height="100%" width="100%"></iframe>
+</div>
+</body>
+</html>

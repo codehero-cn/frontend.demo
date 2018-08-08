@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>load_method</title>
+    <script
+            src="http://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <style>
+     *{margin:0;padding:0;}
+     #nav{float: left;width:15%;height:100%;background-color: #c98f58}
+     #con{float: right;width: 85%;height:100%}
+    </style>
+    <script>
+        $(document).ready(function(){
+            //页面加载的时候，内容框默认显示 a.html
+            $('#con').load('a.html');
+            //单击 a 链接，加载 a.html
+            $("#a1").click(function(){
+                $('#con').load('a.html');
+            });
+            //单击 b 链接，加载 b.html
+            $("#a2").click(function(){
+                $('#con').load('b.html');
+            });
+        })
+    </script>
+</head>
+<body>
+<ul id="nav">
+    <li><a href="#" id="a1">a.html</a></li>
+    <li><a href="#" id="a2">b.html</a></li>
+</ul>
+<div id="con"></div>
+</body>
+</html>

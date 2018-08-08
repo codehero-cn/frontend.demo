@@ -1,0 +1,11 @@
+html, body {
+    width: 99%; /*如果不想出现滚动条的情况，那么就需要在设置width值时，一定要设置一个不为100%的值*/
+    height: 100%;
+    margin: auto;
+}
+
+
+img {
+    float: left;
+    clear: both;
+}

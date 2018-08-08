@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>load_method</title>
+    <script
+            src="http://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <style>
+        * { margin: 0; padding: 0; }
+        #indexMenu {float: left; width: 15%;height: 100%;background-color: #c98f58 }
+        #content {float: right;  width: 85%;height: 100%  }
+    </style>
+</head>
+<body>
+<ul id="indexMenu" >
+    <li><a target="a.html">a.html</a></li>
+    <li><a target="b.html">b.html</a></li>
+
+</ul>
+<div id="content"></div>
+</body>
+
+
+<script>
+    $(document).ready(function () {
+        $.get("a.html", function (data) {//初始化加载界面
+            $("#content").html(data);
+        });
+        
+        $(function () {
+            $('#indexMenu  li').click(function () {//点击li加载界面
+                var $this = $(this),
+                _clickTab = $this.find('a').atrr('target');
+                alert($_clickTab);
+                $.get(_clickTab, function (data) {
+                    $("#content").html(data);
+                });
+            });
+        });
+    });
+</script>
+</html>

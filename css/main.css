@@ -1,0 +1,8 @@
+
+.main {
+    border: solid 1px #f00;
+    margin-top:20px;
+    width: 80%;
+    height: calc(100% - 20px - 40px - 4px);
+    float: right;
+}

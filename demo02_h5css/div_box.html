@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>div盒子模型</title>
+</head>
+<body  class="body">
+<style type="text/css">
+    .body{
+       margin:auto 
+    }
+    .bigBox {
+        width: 400px;
+        height: 400px;
+        background: #6F9;
+    }
+    
+    .smallBox {
+        background: #f1ff9b;
+        border:solid 10px #f00;
+        /* padding:5px;就是上下左右都为5；
+           padding:0px,5px;就是上下为0，左右为5；
+           padding:10px 5px 15px;就是上位10，左右为5，下为15；
+           padding:0px,5px,10px,15px;就是上为0，右为5，下为10，左为15，
+           padding的顺序是顺时针方向的
+         */
+        margin: 10px 20px 30px 10px;
+        padding: 10px 20px 30px 10px;
+        
+    }
+
+    
+</style>
+</head>
+<body>
+<h3>盒子模型</h3>
+<div style="float:left" class="bigBox">
+    大盒子
+    <div class="smallBox">
+        小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子
+        小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子
+        小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子
+        小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子
+        小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子小盒子
+    </div>
+</div>
+
+<div style="float:left">
+    <img src="resource/images/div_box.jpg" width="600px"/>
+</div>
+
+</body>
+</html>
